@@ -34,13 +34,13 @@ export default function About() {
             <div className={classes.headerColor}>What I do:</div>
             <ul>
               <li>
-                I make applications, games, and logic puzzles. I like coding for both the art and the problem solving
+                I make applications, games, and websites. I like coding for both the art and the problem solving
               </li>
               <li>
                 I make music and cool sounds
               </li>
               <li>
-                I made this website to learn more about Material UI. I like to learn.
+                I made this website, in part, to get better at using Material UI CSS with React. I like to learn
               </li>
             </ul>
           </ol>
@@ -51,13 +51,13 @@ export default function About() {
                 I organize a weekly coding club where we share ideas and do whiteboarding problems
               </li>
               <li>
-                I've worked collaboratively on a bunch of projects. I learned how to code in a pair programming setting.
+                I've worked collaboratively on a bunch of projects. I learned how to code in a pair programming setting
               </li>
               <li>
-                I've been hired in as a tutor in React/JS.
+                I've been hired in as a tutor in React/JS
               </li>
               <li>
-                Programming is a career change for me, the love of building and making that came out of my media arts career has not left though
+                I have a degree in Media Arts so becoming a developer is a career change for me, however I've been building things and working on projects my whole adult life after school
               </li>
             </ul>
           </ol>
@@ -68,13 +68,13 @@ export default function About() {
                 Get an internship or job as a developer
               </li>
               <li>
-                I am currently pursuing a Bachelor of Science of Computer Science.
+                I am currently pursuing a Bachelor of Science in Computer Science.
               </li>
               <li>
-                I am learning JAVA. I know JS/React/CSS and noSQL but I am always looking to get better. I want to learn more programming languages based on projects that are interesting.
+                I am learning JAVA. I know JS/React/CSS and noSQL but I am always looking to get better. I want to learn more programming languages based on projects that are interesting
               </li>
               <li>
-                I like doing math problems, edabit.com, hackerank.com, khan, prob solving websites.
+                I like doing math problems, edabit.com, hackerank.com, khan, prob solving websites
               </li>
             </ul>
           </ol>
