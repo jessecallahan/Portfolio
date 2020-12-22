@@ -1,13 +1,13 @@
 import React from "react";
 import './App.css';
 
-import PortfolioControl from './Components/PortfolioControl'
+import Control from './Components/Control'
 
 
 function App() {
   return (
     <React.Fragment >
-      <PortfolioControl />
+      <Control />
     </React.Fragment>
   );
 }

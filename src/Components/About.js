@@ -1,7 +1,6 @@
-import CityPic from '../Assets/citytrackerpic.jpg'
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,7 +36,7 @@ export default function About() {
                 I make applications, games, and websites. I like coding for both the art and the problem solving
               </li>
               <li>
-                I make music and cool sounds
+                I like doing math problems, edabit.com, hackerank.com, khan, prob solving websites
               </li>
               <li>
                 I made this website, in part, to get better at using Material UI CSS with React. I like to learn
@@ -51,13 +50,13 @@ export default function About() {
                 I organize a weekly coding club where we share ideas and do whiteboarding problems
               </li>
               <li>
-                I've worked collaboratively on a bunch of projects. I learned how to code in a pair programming setting
+                I've worked collaboratively on many projects. I learned how to code in a pair programming setting
               </li>
               <li>
-                I've been hired in as a tutor in React/JS
+                I've been hired as a tutor in React/JS
               </li>
               <li>
-                I have a degree in Media Arts so becoming a developer is a career change for me, however I've been building things and working on projects my whole adult life after school
+                I have a degree in Media Arts. Becoming a developer is a career change for me. However I've been a builder, working on projects my whole adult life
               </li>
             </ul>
           </ol>
@@ -72,9 +71,6 @@ export default function About() {
               </li>
               <li>
                 I am learning JAVA. I know JS/React/CSS and noSQL but I am always looking to get better. I want to learn more programming languages based on projects that are interesting
-              </li>
-              <li>
-                I like doing math problems, edabit.com, hackerank.com, khan, prob solving websites
               </li>
             </ul>
           </ol>

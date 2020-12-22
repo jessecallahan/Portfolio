@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
@@ -8,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import Home from './Home'
 import Work from './Work'
 import About from './About'
+import Contact from './Contact'
 
 const StyledTabs = withStyles({
   root: {
@@ -80,7 +80,7 @@ const TabPanel = (props) => {
   )
 }
 
-export default function TabTest() {
+export default function Control() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
   console.log(value)
@@ -109,6 +109,9 @@ export default function TabTest() {
           </TabPanel>
           <TabPanel value={value} index={2}>
             <Work />
+          </TabPanel>
+          <TabPanel value={value} index={3}>
+            <Contact />
           </TabPanel>
           <Typography className={classes.padding} />
         </div>
