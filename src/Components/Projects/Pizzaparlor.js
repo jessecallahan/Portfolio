@@ -33,13 +33,13 @@ export default function Project1() {
         <Grid item md={6}>
           <h1>Pizza Parlor</h1>
           <p className={classes.color}>Pizza Parlor is an example of a pizza parlor's ticket system. It takes orders, holds orders in a fake database, and shows them to the user. Kind of a mock back end system for a restaurant application. I plan to replicate this using noSQL and modern front end techniques. </p>
-          <p><a href='https://github.com/jessecallahan/pizza-parlor' target="_blank">Link to GitHub</a></p>
+          <p><a href='https://github.com/jessecallahan/pizza-parlor' target="_blank" rel="noreferrer">Link to GitHub</a></p>
         </Grid>
         <Grid item md={6}>
           <br></br>
           <br></br>
           <div >
-            <img className={classes.img} src={ProjPic} />
+            <img className={classes.img} alt="pizza" src={ProjPic} />
           </div>
         </Grid>
       </Grid>

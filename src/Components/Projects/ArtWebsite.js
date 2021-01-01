@@ -39,7 +39,7 @@ export default function Project1() {
           <br></br>
           <br></br>
           <div >
-            <img className={classes.img} src={ProjPic} />
+            <img className={classes.img} alt="art" src={ProjPic} />
           </div>
         </Grid>
       </Grid>

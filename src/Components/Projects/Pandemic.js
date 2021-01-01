@@ -34,14 +34,14 @@ export default function Project1() {
         <Grid item md={6}>
           <h1>Pandemic Game</h1>
           <p className={classes.color}>A class project. Made early in my coding path with simple HTML/JS. The lesson was to set and stop intervals. Try playing the game and save the world! </p>
-          <p><a href='https://jessecallahan.github.io/Pandemic-game/' target="_blank">Link to Pandemic Game</a></p>
-          <p><a href='https://github.com/jessecallahan/Pandemic-game' target="_blank">Link to GitHub</a></p>
+          <p><a href='https://jessecallahan.github.io/Pandemic-game/' target="_blank" rel="noreferrer">Link to Pandemic Game</a></p>
+          <p><a href='https://github.com/jessecallahan/Pandemic-game' target="_blank" rel="noreferrer">Link to GitHub</a></p>
         </Grid>
         <Grid item md={6}>
           <br></br>
           <br></br>
           <div >
-            <a href='https://jessecallahan.github.io/Pandemic-game/' target="_blank"><img className={classes.img} src={ProjPic} /></a>
+            <a href='https://jessecallahan.github.io/Pandemic-game/' target="_blank" rel="noreferrer"><img className={classes.img} alt="pandemic game" src={ProjPic} /></a>
           </div>
         </Grid>
       </Grid>

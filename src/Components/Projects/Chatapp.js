@@ -33,13 +33,13 @@ export default function Project1() {
         <Grid item md={6}>
           <h1>Fire Chat</h1>
           <p className={classes.color}>This is a chat app I am working on with my friend Supriya. Also my friend and artist, Tara is going to help with art direction. We are in predeployment. What we are trying to do is make a chat app that can be created in a web browser and sent as a link; a way to get a chat room together quickly without downloading an app or signing up to a service. We are developing it with React, React Hooks, and Firestore.</p>
-          <p><a href='https://github.com/jessecallahan/fire_chat' target="_blank">Link to GitHub page</a></p>
+          <p><a href='https://github.com/jessecallahan/fire_chat' target="_blank" rel="noreferrer">Link to GitHub page</a></p>
         </Grid>
         <Grid item md={6}>
           <br></br>
           <br></br>
           <div >
-            <img className={classes.img} src={ProjPic} />
+            <img className={classes.img} alt="chat website" src={ProjPic} />
           </div>
         </Grid>
       </Grid>

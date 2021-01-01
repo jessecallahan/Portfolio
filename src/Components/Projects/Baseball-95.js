@@ -34,14 +34,14 @@ export default function Project1() {
         <Grid item md={6}>
           <h1>Baseball-95</h1>
           <p className={classes.color}>This a ReactJS console game I made called Major League Baseball-95. It was a final project for a class. All the score and "moves" of the 9 inning baseball game are stored in local state. I am working on a version 2.0 that is connected to the noSQL server firebase and will have functions like save game, start new game, and have a leaderboard. All the art was done by my friend Andrew. 3.0 is an app using React Native.</p>
-          <p><a href='https://jessecallahan.github.io/baseball-95/' target="_blank">Link to Baseball-95</a></p>
-          <p><a href='https://github.com/jessecallahan/baseball-95' target="_blank">Link to GitHub</a></p>
+          <p><a href='https://jessecallahan.github.io/baseball-95/' target="_blank" rel="noreferrer">Link to Baseball-95</a></p>
+          <p><a href='https://github.com/jessecallahan/baseball-95' target="_blank" rel="noreferrer">Link to GitHub</a></p>
         </Grid>
         <Grid item md={6}>
           <br></br>
           <br></br>
           <div >
-            <a href='https://jessecallahan.github.io/baseball-95/' target="_blank"><img className={classes.img} src={ProjPic} /></a>
+            <a href='https://jessecallahan.github.io/baseball-95/' target="_blank" rel="noreferrer"><img className={classes.img} alt="baseball game" src={ProjPic} /></a>
           </div>
         </Grid>
       </Grid>

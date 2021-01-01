@@ -33,14 +33,14 @@ export default function Project1() {
           <h1>City Tracker</h1>
           <p className={classes.color}>City Tracker allows you to find out more about cities around the world. You might to have to disable COORS in order to use the map search. I made this quite long ago. I want to eventually turn it into a React project. It uses API from a few different services. Was my introduction to npm package managers and Node.js.</p>
           <p>BUG: WIKI API IS DOWN, WORKING TO FIX IT</p>
-          <p><a href='https://jessecallahan.github.io/city-tracker/' target="_blank">Link to City Tracker</a></p>
-          <p><a href='https://github.com/jessecallahan/city-tracker' target="_blank">Link to GitHub</a></p>
+          <p><a href='https://jessecallahan.github.io/city-tracker/' target="_blank" rel="noreferrer">Link to City Tracker</a></p>
+          <p><a href='https://github.com/jessecallahan/city-tracker' target="_blank" rel="noreferrer">Link to GitHub</a></p>
         </Grid>
         <Grid item md={6}>
           <br></br>
           <br></br>
           <div >
-            <a href='https://jessecallahan.github.io/city-tracker/' target="_blank"><img className={classes.img} src={ProjPic} /></a>
+            <a href='https://jessecallahan.github.io/city-tracker/' target="_blank" rel="noreferrer"><img className={classes.img} alt="city" src={ProjPic} /></a>
           </div>
         </Grid>
       </Grid>

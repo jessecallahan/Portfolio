@@ -5,7 +5,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import { workService } from './WorkService'
+// import { workService } from './WorkService'
 import ArtWebsite from './Projects/ArtWebsite';
 import Baseball95 from './Projects/Baseball-95.js'
 import ChatApp from './Projects/Chatapp';
@@ -94,7 +94,7 @@ export default function Work() {
         <Tab label="City Tracker" {...a11yProps(2)} />
         <Tab label="Pandemic Game" {...a11yProps(3)} />
         <Tab label="Pizza Parlor" {...a11yProps(4)} />
-        <Tab label="Movie Thing" {...a11yProps(5)} />
+        <Tab label="Movie Spective" {...a11yProps(5)} />
         <Tab label="Art Website" {...a11yProps(6)} />
       </Tabs>
       <TabPanel value={value} index={0}>
