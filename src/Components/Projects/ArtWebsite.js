@@ -33,13 +33,15 @@ export default function Project1() {
       <Grid container spacing={0}>
         <Grid item md={6}>
           <h1>Art Website</h1>
-          <p className={classes.color}>I am making a website for my Dad who is a visual artist and wants to sell his work. We are basing it on this portfolio site using Material UI and React and probably something simple like PayPal to make transactions. I will also set up a database for his site and host it on Firebase so he can have analytics and save things. </p>
+          <p className={classes.color}>This is a website for my Dad who is a visual artist. We used the very cool <a href='https://github.com/neptunian/react-photo-gallery' target="_blank" rel="noreferrer">react-photo-gallery</a> dependency to display his art and React Bootstrap to handle the other stuff. We also used the Flickr Api to populate our gallery. He uploads his work to his Flickr account and his site automatically updates with the new work. Enjoy!</p>
+          <p><a href='https://jessecallahan.github.io/mikes-art-website/' target="_blank" rel="noreferrer">Link to Art Site</a></p>
+          <p><a href='https://github.com/jessecallahan/mikes-art-website' target="_blank" rel="noreferrer">Link to GitHub</a></p>
         </Grid>
         <Grid item md={6}>
           <br></br>
           <br></br>
           <div >
-            <img className={classes.img} alt="art" src={ProjPic} />
+            <a href='https://jessecallahan.github.io/mikes-art-website/' target="_blank" rel="noreferrer"><img className={classes.img} alt="art" src={ProjPic} /></a>
           </div>
         </Grid>
       </Grid>

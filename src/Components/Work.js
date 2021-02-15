@@ -94,7 +94,7 @@ export default function Work() {
         <Tab label="City Tracker" {...a11yProps(2)} />
         <Tab label="Pandemic Game" {...a11yProps(3)} />
         <Tab label="Pizza Parlor" {...a11yProps(4)} />
-        <Tab label="Movie Spective" {...a11yProps(5)} />
+        <Tab label="Movie Website" {...a11yProps(5)} />
         <Tab label="Art Website" {...a11yProps(6)} />
       </Tabs>
       <TabPanel value={value} index={0}>
