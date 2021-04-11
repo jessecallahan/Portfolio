@@ -11,7 +11,7 @@ import Baseball95 from './Projects/Baseball-95.js'
 import ChatApp from './Projects/Chatapp';
 import CityTracker from './Projects/Citytracker'
 import Movie from './Projects/Movie';
-import Pandemic from './Projects/Pandemic'
+import Jeopardy from './Projects/Jeopardy'
 import Pizza from './Projects/Pizzaparlor'
 
 function TabPanel(props) {
@@ -92,7 +92,7 @@ export default function Work() {
         <Tab label="Baseball 95" {...a11yProps(0)} />
         <Tab label="Chat App" {...a11yProps(1)} />
         <Tab label="City Tracker" {...a11yProps(2)} />
-        <Tab label="Pandemic Game" {...a11yProps(3)} />
+        <Tab label="Jeopardy! Simulator" {...a11yProps(3)} />
         <Tab label="Pizza Parlor" {...a11yProps(4)} />
         <Tab label="Movie Website" {...a11yProps(5)} />
         <Tab label="Art Website" {...a11yProps(6)} />
@@ -107,7 +107,7 @@ export default function Work() {
         <CityTracker />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <Pandemic />
+        <Jeopardy />
       </TabPanel>
       <TabPanel value={value} index={4}>
         <Pizza />
