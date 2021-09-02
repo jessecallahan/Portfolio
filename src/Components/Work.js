@@ -8,8 +8,8 @@ import Box from '@material-ui/core/Box';
 // import { workService } from './WorkService'
 import ArtWebsite from './Projects/ArtWebsite';
 import Baseball95 from './Projects/Baseball-95.js'
-import ChatApp from './Projects/Chatapp';
-import CityTracker from './Projects/Citytracker'
+import Soundmaker from './Projects/Soundmaker';
+import Api from './Projects/Api'
 import Movie from './Projects/Movie';
 import Jeopardy from './Projects/Jeopardy'
 import Pizza from './Projects/Pizzaparlor'
@@ -90,34 +90,35 @@ export default function Work() {
         alignItems="flex"
       >
         <Tab label="Baseball 95" {...a11yProps(0)} />
-        <Tab label="Chat App" {...a11yProps(1)} />
-        <Tab label="City Tracker" {...a11yProps(2)} />
-        <Tab label="Jeopardy! Simulator" {...a11yProps(3)} />
-        <Tab label="Pizza Parlor" {...a11yProps(4)} />
-        <Tab label="Movie Website" {...a11yProps(5)} />
-        <Tab label="Art Website" {...a11yProps(6)} />
+        <Tab label="Soundmaker" {...a11yProps(1)} />
+        <Tab label="Jeopardy! Simulator" {...a11yProps(2)} />
+        <Tab label="Pizza Parlor" {...a11yProps(3)} />
+        <Tab label="Movie Website" {...a11yProps(4)} />
+        <Tab label="Art Website" {...a11yProps(5)} />
+        <Tab label="API Project" {...a11yProps(6)} />
       </Tabs>
       <TabPanel value={value} index={0}>
         <Baseball95 />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <ChatApp />
+        <Soundmaker />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <CityTracker />
-      </TabPanel>
-      <TabPanel value={value} index={3}>
         <Jeopardy />
       </TabPanel>
-      <TabPanel value={value} index={4}>
+      <TabPanel value={value} index={3}>
         <Pizza />
       </TabPanel>
-      <TabPanel value={value} index={5}>
+      <TabPanel value={value} index={4}>
         <Movie />
       </TabPanel>
-      <TabPanel value={value} index={6}>
+      <TabPanel value={value} index={5}>
         <ArtWebsite />
       </TabPanel>
+      <TabPanel value={value} index={6}>
+        <Api />
+      </TabPanel>
+
     </div>
   );
 }
