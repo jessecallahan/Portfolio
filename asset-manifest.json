@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.f837cfa5.chunk.css",
-    "main.js": "/Portfolio/static/js/main.2b925c4e.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.2b925c4e.chunk.js.map",
+    "main.js": "/Portfolio/static/js/main.2179aacc.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.2179aacc.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.fa05d50e.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.fa05d50e.js.map",
     "static/js/2.ab24ec07.chunk.js": "/Portfolio/static/js/2.ab24ec07.chunk.js",
@@ -15,9 +15,9 @@
     "static/media/api.6b08aa57.png": "/Portfolio/static/media/api.6b08aa57.png",
     "static/media/artpic.cac6a00b.jpg": "/Portfolio/static/media/artpic.cac6a00b.jpg",
     "static/media/baseballpic.976b113c.png": "/Portfolio/static/media/baseballpic.976b113c.png",
+    "static/media/chatpic.73241887.png": "/Portfolio/static/media/chatpic.73241887.png",
     "static/media/headshot.fc6df588.jpg": "/Portfolio/static/media/headshot.fc6df588.jpg",
     "static/media/jeopardy.66fd4878.png": "/Portfolio/static/media/jeopardy.66fd4878.png",
-    "static/media/moviepic.51d14a29.png": "/Portfolio/static/media/moviepic.51d14a29.png",
     "static/media/pizzapic.b70804ab.png": "/Portfolio/static/media/pizzapic.b70804ab.png",
     "static/media/soundmaker.38aef680.png": "/Portfolio/static/media/soundmaker.38aef680.png"
   },
@@ -25,6 +25,6 @@
     "static/js/runtime-main.fa05d50e.js",
     "static/js/2.ab24ec07.chunk.js",
     "static/css/main.f837cfa5.chunk.css",
-    "static/js/main.2b925c4e.chunk.js"
+    "static/js/main.2179aacc.chunk.js"
   ]
 }
