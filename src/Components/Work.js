@@ -10,9 +10,9 @@ import ArtWebsite from './Projects/ArtWebsite';
 import Baseball95 from './Projects/Baseball-95.js'
 import Soundmaker from './Projects/Soundmaker';
 import Api from './Projects/Api'
-import Movie from './Projects/Movie';
 import Jeopardy from './Projects/Jeopardy'
 import Pizza from './Projects/Pizzaparlor'
+import QuickChat from './Projects/Quick_chat'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -89,28 +89,28 @@ export default function Work() {
         className={classes.tabs}
         alignItems="flex"
       >
-        <Tab label="Baseball 95" {...a11yProps(0)} />
-        <Tab label="Soundmaker" {...a11yProps(1)} />
-        <Tab label="Jeopardy! Simulator" {...a11yProps(2)} />
-        <Tab label="Pizza Parlor" {...a11yProps(3)} />
-        <Tab label="Movie Website" {...a11yProps(4)} />
-        <Tab label="Art Website" {...a11yProps(5)} />
+        <Tab label="Quick Chat" {...a11yProps(0)} />
+        <Tab label="Baseball 95" {...a11yProps(2)} />
+        <Tab label="Soundmaker" {...a11yProps(2)} />
+        <Tab label="Jeopardy! Simulator" {...a11yProps(3)} />
+        <Tab label="Pizza Parlor" {...a11yProps(4)} />
+        <Tab label="Michael's Art Site" {...a11yProps(5)} />
         <Tab label="API Project" {...a11yProps(6)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <Baseball95 />
+        <QuickChat />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Soundmaker />
+        <Baseball95 />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Jeopardy />
+        <Soundmaker />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <Pizza />
+        <Jeopardy />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <Movie />
+        <Pizza />
       </TabPanel>
       <TabPanel value={value} index={5}>
         <ArtWebsite />

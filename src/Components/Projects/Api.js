@@ -30,15 +30,15 @@ export default function Project1() {
     <div className={classes.root}>
       <Grid container spacing={0}>
         <Grid item md={6}>
-          <h1>Api</h1>
-          <p className={classes.color}>I built a pretty simplistic api that has full CRUD capabilities. I did this using C#, .NET ASP Core framework, and MySQL. The only way to view this is by downloading it off github and running the get and post requests on Postman or some other API tool. It also has some seeded data that you can play around with.</p>
-          <p><a href='https://github.com/jessecallahan/AnimalShelter.Solution' target="_blank" rel="noreferrer">Link to GitHub</a></p>
+          <h1>Geocache Api Project</h1>
+          <p className={classes.color}>I built a geocache simulator api. It has full CRUD capabilities including a PATCH endpoint to edit and move items in a geocache location. The relationship of geocaching locations to items is a one-to-many database relationship. I built this using C#/.NET ASP Core WEB API and SQLite so you can run it locally quickly. Check the github instructions and give it a try!</p>
+          <p><a href='https://github.com/jessecallahan/GeocacheAPI.Solution' target="_blank" rel="noreferrer">Link to GitHub</a></p>
         </Grid>
         <Grid item md={6}>
           <br></br>
           <br></br>
           <div >
-            <a href='https://github.com/jessecallahan/AnimalShelter.Solution' target="_blank" rel="noreferrer"><img className={classes.img} alt="city" src={ProjPic} /></a>
+            <a href='https://github.com/jessecallahan/GeocacheAPI.Solution' target="_blank" rel="noreferrer"><img className={classes.img} alt="api" src={ProjPic} /></a>
           </div>
         </Grid>
       </Grid>
