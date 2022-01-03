@@ -95,7 +95,7 @@ export default function Work() {
         <Tab label="Jeopardy! Simulator" {...a11yProps(3)} />
         <Tab label="Pizza Parlor" {...a11yProps(4)} />
         <Tab label="Michael's Art Site" {...a11yProps(5)} />
-        <Tab label="API Project" {...a11yProps(6)} />
+        <Tab label="Geocache API Project" {...a11yProps(6)} />
       </Tabs>
       <TabPanel value={value} index={0}>
         <QuickChat />
