@@ -31,7 +31,7 @@ export default function Project1() {
       <Grid container spacing={0}>
         <Grid item md={6}>
           <h1>Geocache Api Project</h1>
-          <p className={classes.color}>I built a geocache simulator api. It has full CRUD capabilities including a PATCH endpoint to edit and move items in a geocache location. The relationship of geocaching locations to items is a one-to-many database relationship. I built this using C#/.NET ASP Core WEB API and SQLite so you can run it locally quickly. Check the github instructions and give it a try!</p>
+          <p className={classes.color}>This application simulates the enormously popular Geocache game. It has full CRUD capabilities including a PATCH endpoint to edit and move items in between Geocache locations. The relationship of Geocaching locations to items is a one-to-many database relationship. I built this using C#/.NET ASP Core WEB API and SQLite. Check out the github instructions and give it a try!</p>
           <p><a href='https://github.com/jessecallahan/GeocacheAPI.Solution' target="_blank" rel="noreferrer">Link to GitHub</a></p>
         </Grid>
         <Grid item md={6}>
