@@ -4,15 +4,21 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Home from './Home'
-import Work from './Work'
-import About from './About'
-import Contact from './Contact'
+import Home from './Home';
+import Work from './Work';
+import About from './About';
+import Contact from './Contact';
+import Fun from './Fun';
+import Blog from './Blog/Blog';
+import BlogPost from './Blog/BlogPost';
+import { Container } from '@material-ui/core';
+import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const StyledTabs = withStyles({
   root: {
-    borderBottom: '1px solid #e8e8e8'
-
+    borderBottom: '1px solid #e8e8e8',
   },
   indicator: {
     backgroundColor: '#228B22',
@@ -56,15 +62,10 @@ const StyledTab = withStyles((theme) => ({
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    "padding-top": "50px"
-
+    paddingTop: "50px"
   },
-  padding: {
-    padding: theme.spacing(3),
-  },
-  demo1: {
-    backgroundColor: "white",
-
+  main: {
+    paddingTop: theme.spacing(3),
   },
 }));
 
@@ -82,41 +83,61 @@ const TabPanel = (props) => {
 
 export default function Control() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-  console.log(value)
+    const navigate = useNavigate();
+  const location = useLocation();
+  const [value, setValue] = useState(0);
+
+  // An array of navigation links
+  const navLinks = [
+    { label: "Home", to: "/portfolio" },
+    { label: "About", to: "/about"},
+    { label: "Work", to: "/work"},
+    { label: "Contact", to: "/contact"},
+  ];
+
+  // Effect to sync the active tab with the current URL path
+  useEffect(() => {
+    const activeLink = navLinks.findIndex(link => link.to === location.pathname);
+    setValue(activeLink !== -1 ? activeLink : 0); // Default to home if no match
+  }, [location, navLinks]);
+
+  // Handler for when a tab is clicked
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    navigate(navLinks[newValue].to);
   };
+
 
   return (
     <div className={classes.root}>
-      <Grid container justify="center">
-        <StyledTabs value={value} onChange={handleChange} aria-label="ant example">
-          <StyledTab label="Home" />
-          <StyledTab label="About" />
-          <StyledTab label="Work" />
-          <StyledTab label="Contact" />
+      <Grid container justifyContent='center'>
+        <StyledTabs value={value} onChange={handleChange} aria-label="navigation">
+              {navLinks.map((link, index) => (
+                  <StyledTab
+                    key={index}
+                    label={link.label}
+                    value={index}
+                  />
+                ))}
         </StyledTabs>
       </Grid>
-      <Grid container justify="center">
-        <div className={classes.demo1}>
+      <Container maxWidth="md" justifyContent='center' className={classes.main}>
+        <>
+          <Routes> 
+            <Route path="/portfolio" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/contact" element={<Contact />} />
 
-          <TabPanel value={value} index={0}>
-            <Home />
-          </TabPanel>
-          <TabPanel value={value} index={1}>
-            <About />
-          </TabPanel>
-          <TabPanel value={value} index={2}>
-            <Work />
-          </TabPanel>
-          <TabPanel value={value} index={3}>
-            <Contact />
-          </TabPanel>
-          <Typography className={classes.padding} />
-        </div>
-      </Grid>
+            <Route path="/fun" element={<Fun />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:postId" element={<BlogPost />} />
+          </Routes>
+        </>
+      </Container>
     </div >
+
+
 
   );
 }

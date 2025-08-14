@@ -1,24 +1,23 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-
+import { Outlet, Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    maxWidth: 800,
-    margin: 0,
-    'line-height': 1.6,
-
-  },
   color: {
     color: '#228B22',
-    margin: '10px 150px 0px 150px',
-    top: 0,
-    'line-height': '1.6',
-    'font-size': 15
+    fontSize: 16,
+    fontWeight: 600,
+    lineHeight: '1.5'
   },
   headerColor: {
     color: 'black'
+  },
+  ul: {
+    margin: 0,
+    padding: 0
+  },
+  text: {
+    paddingTop: 12
   }
 }));
 
@@ -26,20 +25,20 @@ export default function About() {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <>
       <div className={classes.color}>
-        <ul>
+        <ul className={classes.ul}>
           <ol>
             <div className={classes.headerColor}>What I do:</div>
             <ul>
               <li>
-                I make applications, games, and websites. I like coding for both the art and the problem solving
+                I build modern web applications. I've worked with most of the popular JS frameworks and integrated hundreds of libraries. I do this while maintaining a solid grasp of the fundamentals: HTML, JS, CSS, Window, DOM. It's how most of the frontend stuff is built. This foundational knowledge can also be valuable when fixing bugs. It also allows me to build from things from scratch and to customize further then what's already out there
               </li>
               <li>
-                I like doing math problems, edabit.com, hackerank.com, khan, prob solving websites
+                I maintain a few different databases and their connecting API on a variety of ORMs. I can make a CRUD application with standard REST API. I can write complex queries and use LINQ methods. Optimize a database with indexes. All that good stuff. With a handful of tools: Postgres, Oracle, SQLServer. Can also use some of the ‘newer’ tools as well: Trpc, Prisma, Express, Firebase/Firestore  
               </li>
               <li>
-                I made this website, in part, to get better at using Material UI CSS with React. I like to learn
+                I can work on older code. One of the projects I work on is a legacy codebase built originally in 2001 (JAVA 1.7, XML, Oracle DB). I have already been involved in one major rewrite on a different application that involved accessibility and mobile first design. I am currently involved in re-writing this legacy system due to launch in Spring 2026
               </li>
             </ul>
           </ol>
@@ -47,16 +46,13 @@ export default function About() {
             <div className={classes.headerColor}>What I've done:</div>
             <ul>
               <li>
-                I organize a weekly coding club where we share ideas and do whiteboarding problems
+                I‘ve completed a rigorous full time 6-month coding ‘bootcamp’. Learned the basics of: JS, React, C# in a peer programming setting. Obtained a internship. Many of my classmates and I went on to code professionally
               </li>
               <li>
-                I've worked collaboratively on many projects. I learned how to code in a pair programming setting
+                I obtained an Associate's degree from Seattle Central during COVID, to pursue a Bachelor of Science in Computer Science, where I was accepted to: Seattle Pacific University, Seattle University, and University of Washington Bothell. Was working as a React/JS tutor at this time as well
               </li>
               <li>
-                I've been hired as a tutor in React/JS
-              </li>
-              <li>
-                I have a degree in Media Arts. Becoming a developer is a career change for me. However I've been a builder, working on projects my whole adult life
+                I have a degree in Media Arts from Evergreen State. I worked as a music director at KAOS there in Olympia, WA and then as a reporter/editor for KBCS in Seattle, WA
               </li>
             </ul>
           </ol>
@@ -64,18 +60,19 @@ export default function About() {
             <div className={classes.headerColor}>What I hope to do:</div>
             <ul>
               <li>
-                Get an internship or job as a developer
+                Help you with your website or application. If it’s a bigger project, the company I work for, Fellow, could take a look and possibly offer services
               </li>
               <li>
-                I am currently pursuing a Bachelor of Science in Computer Science.
+                Collaborate on cool open source projects 
               </li>
               <li>
-                I am learning JAVA. I know JS/React/CSS and noSQL but I am always looking to get better. I want to learn more programming languages based on projects that are interesting
+                Continue my education. Either in Computer Science, Software Engineering, and/or AI Development
               </li>
             </ul>
           </ol>
         </ul>
+        <div className={classes.text}>I am always experimenting with new ideas and coding for fun. Check out my <Link to="/fun">fun</Link> projects page and my <Link to="/blog">blog</Link>, where I share my ideas.</div>
       </div>
-    </React.Fragment >
+    </>
   );
 }

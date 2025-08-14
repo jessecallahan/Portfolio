@@ -6,13 +6,11 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 // import { workService } from './WorkService'
-import ArtWebsite from './Projects/ArtWebsite';
+import ArtWebsite from './Projects/ArtWebsite.js';
 import Baseball95 from './Projects/Baseball-95.js'
-import Soundmaker from './Projects/Soundmaker';
-import Api from './Projects/Api'
-import Jeopardy from './Projects/Jeopardy'
-import Pizza from './Projects/Pizzaparlor'
-import QuickChat from './Projects/Quick_chat'
+import FIT from './Work/FIT.js'
+import OEM from './Work/OEM.js'
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -54,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
-    height: 350,
   },
   indicator: {
     backgroundColor: '#228B22',
@@ -66,7 +63,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Work() {
-  // const workList = workService();
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -89,36 +85,15 @@ export default function Work() {
         className={classes.tabs}
         alignItems="flex"
       >
-        <Tab label="Quick Chat" {...a11yProps(0)} />
-        <Tab label="Baseball 95" {...a11yProps(2)} />
-        <Tab label="Soundmaker" {...a11yProps(2)} />
-        <Tab label="Jeopardy! Simulator" {...a11yProps(3)} />
-        <Tab label="Pizza Parlor" {...a11yProps(4)} />
-        <Tab label="Michael's Art Site" {...a11yProps(5)} />
-        <Tab label="Geocache API Project" {...a11yProps(6)} />
+        <Tab label="Financial Intelligence Tool" {...a11yProps(0)} />
+         <Tab label="Raw Material Supply Chain Management Application" {...a11yProps(1)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <QuickChat />
+        <FIT />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Baseball95 />
+        <OEM />
       </TabPanel>
-      <TabPanel value={value} index={2}>
-        <Soundmaker />
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <Jeopardy />
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <Pizza />
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-        <ArtWebsite />
-      </TabPanel>
-      <TabPanel value={value} index={6}>
-        <Api />
-      </TabPanel>
-
     </div>
   );
 }
