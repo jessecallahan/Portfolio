@@ -33,7 +33,7 @@ export default function Project1() {
       <Grid container spacing={0}>
         <Grid item md={6}>
           <h1>Jeopardy! Simulator</h1>
-          <p className={classes.color}>Jeopardy! Simulator emulates the classic game show game using CSS and modern webpack. This game also uses api technology, utilizing the trivia api, <a href='https://jservice.io/' target="_blank" rel="noreferrer">J Service</a>. I also collaborated on this project with four other people remotely so github and git branching was used. Do you have what it takes to score big in Jeopardy? Try it out!</p>
+          <p className={classes.color}>Jeopardy! Simulator emulates the classic game show. Unfortunately, this game used a trivia api called J Service that is no longer in service. One day I hope to rework this. I wanted to showcase this because when working, it was a fully functional Jeopardy! game using just JS/HTML and object oriented programming.</p>
           <p><a href='https://saoud.github.io/Team-Week-Project-Jeopardy-Simulator/' target="_blank" rel="noreferrer">Link to Jeopardy! Simulator</a></p>
           <p><a href='https://github.com/saoud/Team-Week-Project-Jeopardy-Simulator' target="_blank" rel="noreferrer">Link to GitHub</a></p>
         </Grid>
