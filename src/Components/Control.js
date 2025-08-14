@@ -89,7 +89,7 @@ export default function Control() {
 
   // An array of navigation links
   const navLinks = [
-    { label: "Home", to: "/portfolio" },
+    { label: "Home", to: "/" },
     { label: "About", to: "/about"},
     { label: "Work", to: "/work"},
     { label: "Contact", to: "/contact"},
@@ -124,7 +124,7 @@ export default function Control() {
       <Container maxWidth="md" justifyContent='center' className={classes.main}>
         <>
           <Routes> 
-            <Route path="/portfolio" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/work" element={<Work />} />
             <Route path="/contact" element={<Contact />} />
