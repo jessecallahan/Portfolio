@@ -32,9 +32,10 @@ export default function OEM() {
     <div className={classes.root}>
       <Grid container spacing={0}>
         <h1>Raw Material Supply Chain Management Application for Large Automotive OEM</h1>
-        <p className={classes.color}>The application is a workflow and approval web application used by the OEM’s supply-chain partners to define, submit for approval and manage changes to steel and aluminum part specifications. In addition, trials raw material ordering and shipments are managed within the application on behalf of the OEM’s part suppliers. The application supports bi-directional integration with the OEM’s SAP system..</p>
-<p>I am a developer for new features and enhancements made to this application. I provide ongoing production support, code enhancements and fixes to the application. I report directly to the Solution Architect to ensure work is delivered on time and within scope.
-</p>
+        <div className={classes.color}>
+          <p className={classes.color}>The application is a workflow and approval web application used by the OEM’s supply-chain partners to define, submit for approval and manage changes to steel and aluminum part specifications. In addition, trials raw material ordering and shipments are managed within the application on behalf of the OEM’s part suppliers. The application supports bi-directional integration with the OEM’s SAP system..</p>
+          <p>I am a developer for new features and enhancements made to this application. I provide ongoing production support, code enhancements and fixes to the application. I report directly to the Solution Architect to ensure work is delivered on time and within scope.
+          </p>
           <p>My duties include:
             <ul>
               <li>
@@ -50,13 +51,14 @@ export default function OEM() {
               <li>
                 Technologies used: Oracle, JAVA, XML, JavaScript
               </li>
-<li>
-  Create, review, and update documentation and specifications
-</li>
+              <li>
+                Create, review, and update documentation and specifications
+              </li>
             </ul>
           </p>
-
+        </div>
       </Grid>
+
     </div >
   );
 }
