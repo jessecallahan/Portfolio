@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script type="text/javascript">
+    // Handle client-side routing for single-page applications on static hosts.
+    // This version aims to pass the path more cleanly to BrowserRouter.
+
+    var pathSegmentsToKeep = 1; // For '/Portfolio' repo
+    var location = window.location;
+    var pathname = location.pathname;
+    var search = location.search;
+    var hash = location.hash;
+
+    // Reconstruct the path to be handled by BrowserRouter
+    // We'll redirect to the root index.html, passing the desired route as a query param
+    // or as part of the URL path itself if possible without the '?' marker.
+
+    // Get the portion of the path that represents the SPA route
+    var routePath = pathname.split('/').slice(1 + pathSegmentsToKeep).join('/');
+
+    // Construct the URL for index.html to load, passing the route.
+    // A common pattern is to pass it as a query parameter, or directly if the server is configured.
+    // For simplicity and better compatibility with BrowserRouter, let's try to pass it as a direct path segment after the base.
+    // The '?' before 'blog' is NOT what BrowserRouter wants. It wants '/Portfolio/blog/1' or 'blog/1' relative to base.
+
+    // The MOST reliable way without relying on server rewrite rules:
+    // Redirect to index.html with the full path in the hash.
+    // This mimics HashRouter's behavior but with BrowserRouter's core.
+    // It's a bit of a hybrid, but often works.
+    
+    var finalRedirectUrl = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') +
+                           pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + // Base path like '/Portfolio'
+                           '#' + // Use hash directly!
+                           pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+                           (search ? '&' + search.slice(1).replace(/&/g, '~and~') : '');
+
+    // If you want to try passing as a query param (less common for direct routing):
+    // var finalRedirectUrl = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') +
+    //                        pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') +
+    //                        '?path=/' + pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+    //                        (search ? '&' + search.slice(1).replace(/&/g, '~and~') : '');
+
+
+    location.replace(finalRedirectUrl);
+  </script>
+</head>
+<body></body>
+</html>
