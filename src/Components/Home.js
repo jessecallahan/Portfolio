@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imageContainer: {
     display: 'flex',
-    justifyContent: 'center'
+    justifycontent: 'center'
   },
   h1: {
 

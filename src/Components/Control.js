@@ -110,7 +110,7 @@ export default function Control() {
 
   return (
     <div className={classes.root}>
-      <Grid container justifyContent='center'>
+      <Grid container justifycontent='center'>
         <StyledTabs value={value} onChange={handleChange} aria-label="navigation">
               {navLinks.map((link, index) => (
                   <StyledTab
@@ -121,7 +121,7 @@ export default function Control() {
                 ))}
         </StyledTabs>
       </Grid>
-      <Container maxWidth="md" justifyContent='center' className={classes.main}>
+      <Container maxWidth="md" justifycontent='center' className={classes.main}>
         <>
           <Routes> 
             <Route path="/" element={<Home />} />
