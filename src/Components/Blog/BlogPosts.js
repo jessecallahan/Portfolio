@@ -10,7 +10,7 @@ const BlogPost1 = () => {
   return (
     <>
     <Helmet>
-    </Helmet>
+    
           <title>{self.title}</title>
 
         {/* Open Graph Meta Tags */}
@@ -18,7 +18,7 @@ const BlogPost1 = () => {
         <meta property="og:description" content={self.description} />
         <meta property="og:image" content={self.image} />
 
-        
+      </Helmet>
     <p>I've revamped my website to get a more accurate picture of where I am professionally.</p>
 
       <p>I also wanted to take a look at my old code. It was fun. I cleaned up some things. Updated my photo. Added this blog.</p>
