@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // This script handles client-side routing for single-page applications
+      // deployed on static file servers like GitHub Pages.
+      // It redirects requests for non-existent files to the index.html,
+      // preserving the original path for client-side routing.
+
+      // --- Configuration ---
+      // The number of path segments to keep from the original URL.
+      // For a repo like 'yourusername.github.io/Portfolio', the path is '/Portfolio'.
+      // So, we want to keep the '/Portfolio' segment. Thus, pathSegmentsToKeep = 1.
+      // If your repo was 'yourusername.github.io/my-docs/v1', pathSegmentsToKeep would be 2.
+      var pathSegmentsToKeep = 1;
+      // ---------------------
+
+      var location = window.location;
+      var pathname = location.pathname;
+      var search = location.search;
+      var hash = location.hash;
+
+      // Check if the requested path is likely a client-side route
+      // (e.g., it's not an actual file or directory on the server)
+      // and if it's not already a redirect path.
+      // This condition helps avoid infinite redirects or issues with actual 404s.
+      // The exact condition can be tricky, but for a general SPA, we assume
+      // any path that doesn't resolve to a file should be handled by the SPA.
+
+      // Construct the new URL to redirect to:
+      // It will be the root of your SPA, followed by a marker ('/?/'),
+      // and then the original path (with '&' and '?' encoded for safety).
+      var redirectUrl =
+        location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') +
+        pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + // Keep the base path (e.g., /Portfolio)
+        '/?/' + // Marker to signify a client-side route
+        pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') + // The rest of the path, URL encoded
+        (search ? '&' + search.slice(1).replace(/&/g, '~and~') : '') + // Append query parameters, URL encoded
+        hash; // Append the hash fragment
+
+      // Perform the redirect
+      location.replace(redirectUrl);
+    </script>
+  </head>
+  <body></body>
+</html>
