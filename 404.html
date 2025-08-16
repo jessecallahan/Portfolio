@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <script type="text/javascript">
-      // This script handles client-side routing for single-page applications
-      // deployed on static file servers like GitHub Pages.
-      // It redirects requests for non-existent files to the index.html,
-      // preserving the original path for client-side routing.
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script type="text/javascript">
+    // Handle client-side routing for single-page applications on static hosts.
+    // This version aims to pass the path more cleanly to BrowserRouter.
 
-      // --- Configuration ---
-      // The number of path segments to keep from the original URL.
-      // For a repo like 'yourusername.github.io/Portfolio', the path is '/Portfolio'.
-      // So, we want to keep the '/Portfolio' segment. Thus, pathSegmentsToKeep = 1.
-      // If your repo was 'yourusername.github.io/my-docs/v1', pathSegmentsToKeep would be 2.
-      var pathSegmentsToKeep = 1;
-      // ---------------------
+    var pathSegmentsToKeep = 1; // For '/Portfolio' repo
+    var location = window.location;
+    var pathname = location.pathname;
+    var search = location.search;
+    var hash = location.hash;
 
-      var location = window.location;
-      var pathname = location.pathname;
-      var search = location.search;
-      var hash = location.hash;
+    // Reconstruct the path to be handled by BrowserRouter
+    // We'll redirect to the root index.html, passing the desired route as a query param
+    // or as part of the URL path itself if possible without the '?' marker.
 
-      // Check if the requested path is likely a client-side route
-      // (e.g., it's not an actual file or directory on the server)
-      // and if it's not already a redirect path.
-      // This condition helps avoid infinite redirects or issues with actual 404s.
-      // The exact condition can be tricky, but for a general SPA, we assume
-      // any path that doesn't resolve to a file should be handled by the SPA.
+    // Get the portion of the path that represents the SPA route
+    var routePath = pathname.split('/').slice(1 + pathSegmentsToKeep).join('/');
 
-      // Construct the new URL to redirect to:
-      // It will be the root of your SPA, followed by a marker ('/?/'),
-      // and then the original path (with '&' and '?' encoded for safety).
-      var redirectUrl =
-        location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') +
-        pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + // Keep the base path (e.g., /Portfolio)
-        '/?/' + // Marker to signify a client-side route
-        pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') + // The rest of the path, URL encoded
-        (search ? '&' + search.slice(1).replace(/&/g, '~and~') : '') + // Append query parameters, URL encoded
-        hash; // Append the hash fragment
+    // Construct the URL for index.html to load, passing the route.
+    // A common pattern is to pass it as a query parameter, or directly if the server is configured.
+    // For simplicity and better compatibility with BrowserRouter, let's try to pass it as a direct path segment after the base.
+    // The '?' before 'blog' is NOT what BrowserRouter wants. It wants '/Portfolio/blog/1' or 'blog/1' relative to base.
 
-      // Perform the redirect
-      location.replace(redirectUrl);
-    </script>
-  </head>
-  <body></body>
+    // The MOST reliable way without relying on server rewrite rules:
+    // Redirect to index.html with the full path in the hash.
+    // This mimics HashRouter's behavior but with BrowserRouter's core.
+    // It's a bit of a hybrid, but often works.
+    
+    var finalRedirectUrl = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') +
+                           pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + // Base path like '/Portfolio'
+                           '#' + // Use hash directly!
+                           pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+                           (search ? '&' + search.slice(1).replace(/&/g, '~and~') : '');
+
+    // If you want to try passing as a query param (less common for direct routing):
+    // var finalRedirectUrl = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') +
+    //                        pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') +
+    //                        '?path=/' + pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+    //                        (search ? '&' + search.slice(1).replace(/&/g, '~and~') : '');
+
+
+    location.replace(finalRedirectUrl);
+  </script>
+</head>
+<body></body>
 </html>
