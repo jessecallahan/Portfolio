@@ -43,13 +43,9 @@ function a11yProps(index: number) {
 function Work() {
     const [value, setValue] = React.useState(0);
 
-    const handleChange = (event, newValue) => {
+    const handleChange = (event: any, newValue: React.SetStateAction<number>) => {
         setValue(newValue);
     };
-
-    const CustomTab = ({label}: {label: string}) => <Tab sx={{
-             
-            }} lable={label} {...a11yProps(0)} />;
 
     return (
         <>
