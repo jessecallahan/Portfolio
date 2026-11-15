@@ -14,7 +14,7 @@ export default function Project4() {
         </Grid>
         <Grid size={{ xs: 12, md: 6}} sx={{ pt: 2 }}>
           <div>
-            <a href='https://jessecallahan.github.io/SoundmakerJS/' target="_blank" rel="noreferrer"><img className={styles.img} alt="chat website" src={'/images/soundmaker.png'} /></a>
+            <a href='https://jessecallahan.github.io/SoundmakerJS/' target="_blank" rel="noreferrer"><img className={styles.img} alt="chat website" src={'./images/soundmaker.png'} /></a>
           </div>
         </Grid>
       </Grid>

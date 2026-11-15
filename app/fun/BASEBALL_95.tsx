@@ -13,7 +13,7 @@ export default function Project3() {
         </Grid>
         <Grid size={{ xs: 12, md: 6}} sx={{ pt: 4 }}>
           <div>
-            <a href='https://jessecallahan.github.io/baseball-95/' target="_blank" rel="noreferrer"><img className={styles.img} alt="baseball game" src={'/images/baseballpic.png'} /></a>
+            <a href='https://jessecallahan.github.io/baseball-95/' target="_blank" rel="noreferrer"><img className={styles.img} alt="baseball game" src={'./images/baseballpic.png'} /></a>
           </div>
         </Grid>
       </Grid>

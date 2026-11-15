@@ -14,7 +14,7 @@ export default function Project1() {
         </Grid>
         <Grid size={{ xs: 12, md: 6 }} sx={{ pt: 4 }}>
           <div >
-            <a href='https://jessecallahan.github.io/mikes-art-website/' target="_blank" rel="noreferrer"><img className={styles.img} alt="art" src={'/images/artpic.jpg'} /></a>
+            <a href='https://jessecallahan.github.io/mikes-art-website/' target="_blank" rel="noreferrer"><img className={styles.img} alt="art" src={'./images/artpic.jpg'} /></a>
           </div>
         </Grid>
       </Grid>

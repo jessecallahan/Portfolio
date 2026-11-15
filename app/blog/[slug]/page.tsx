@@ -6,6 +6,12 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.id, // Maps every post id so Next.js can pre-build /blog/[id]
+  }));
+}
+
 // 1. Add generateMetadata function
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const resolvedParams = await params;
@@ -25,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: post.title,
       description: post.description.substring(0, 160),
       type: "article",
-      url: `http://localhost:3000/blog/${slug}`,
+      url: `https://jessecallahan.github.io/Portfolio/blog/${slug}`,
       images: [
         {
           url: post.image, // Can be a local path in /public or an external absolute URL
