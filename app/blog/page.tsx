@@ -18,7 +18,6 @@ export default function Blog() {
               <Typography variant="h5" component="div" gutterBottom>
                 {post.title}
               </Typography>
-
               <Typography style={{color: '#228B22'}}>
                 {post.description}
               </Typography>

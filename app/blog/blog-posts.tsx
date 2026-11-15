@@ -19,7 +19,7 @@ const BlogPost1 = ({ }) => {
                 height: 'auto'
             }}></img>
             <p>
-            Usually at the end of the year, I'll revamp a project, update my professional package and/or reach out to old classmates or coworkers. Talking to people this year, it definitely feels like the year of ai and I don't imagine that stopping anytime soon. Looking at the last century, trends in technology and now, I feel like we are still in the infancy of computers. Even though they are integrated into our everyday life as consumers and they are connected to most major infrastructure. The internet was first brought to our phones in the early 2000's. What will the computers, phones, and the internet of things look like 100 years now? It's hard to decipher if it will be the amount of similarities/difference between a new car and a model T (first produced around 100 years ago, in 1927) or something much more accelerated. Again, not using agentic coding in the year 2026 seems almost old fashioned and it can't be more than a year or two old. That being said, if you're interested, check out how this blog section was made. Use the server component to render the Open Graph stuff and then make the blog posts dynamic client components that can be interacted with. And still built on the basics, HTML, CSS, OOP. To me, the computer or phone is one big abstraction. Being able to conceptualize the bigger system while also understanding its detail or the pieces that make up the whole has always seemed like the most important skill needed to build complex systems and I don't think that part has changed much.
+            Usually at the end of the year, I'll revamp a project, update my professional package and/or reach out to old classmates or coworkers. Talking to people this year, it definitely feels like the year of ai and I don't imagine that stopping anytime soon. Looking at the last century, trends in technology and now, I feel like we are still in the infancy of computers. Even though they are integrated into our everyday life as consumers and they are connected to most major infrastructure. The internet was first brought to our phones in the early 2000's. What will the computers, phones, and the internet of things look like 100 years now? It's hard to decipher if it will be the amount of similarities/difference between a new car and a Model T (first produced around 100 years ago, in 1927) or something much more accelerated. Again, not using agentic coding in the year 2026 seems almost old fashioned and it can't be more than a year or two old. That being said, if you're interested, check out how this blog section was made. Use the server component to render the Open Graph stuff and then make the blog posts dynamic client components that can be interacted with. And still built on the basics, HTML, CSS, OOP. To me, the computer or phone is one big abstraction. Being able to conceptualize the bigger system while also understanding its detail or the pieces that make up the whole has always seemed like the most important skill needed to build complex systems and I don't think that part has changed much.
             </p>
 
 
@@ -31,10 +31,11 @@ const BlogPost1 = ({ }) => {
     )
 };
 
-export const blogPosts: { id: string, title: string; description: string; image: string; content: React.ReactNode }[] = [
+export const blogPosts: { id: string, title: string; date: Date; description: string; image: string; content: React.ReactNode }[] = [
     {
         id: '1',
         title: "Welcome to My New Portfolio",
+        date: new Date(Date.now()),
         description: "I've revamped my website to give you a better picture of where I am professionally.",
         image: "/Portfolio/images/sunset.jpg",
         content: <BlogPost1 />
