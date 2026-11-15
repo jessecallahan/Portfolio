@@ -1,8 +1,14 @@
 'use client';
-import { Box, Tab, Tabs } from '@mui/material';
+import { Box, Grid, styled, Tab, Tabs } from '@mui/material';
 import React from 'react';
 import FIT from './FIT';
 import OEM from './OEM'
+
+const StyledTab = styled(Tab)(({ theme }) => ({
+  '&.Mui-selected': {
+    color: '#228B22',
+  },
+}));
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -16,7 +22,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box p={3}>
+        <Box>
           <>{children}</>
         </Box>
       )}
@@ -41,22 +47,32 @@ function Work() {
 
   return (
     <>
-
-      <Tabs
-        orientation="vertical"
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-      >
-        <Tab label="Financial Intelligence Tool" {...a11yProps(0)} />
-         <Tab label="Raw Material Supply Chain Management Application" {...a11yProps(1)} />
-      </Tabs>
-      <TabPanel value={value} index={0}>
-        <FIT />
-      </TabPanel >
-      <TabPanel  value={value} index={1}>
-        <OEM />
-      </TabPanel >
+      <Grid container spacing={4}>
+        <Grid size={{ xs: 12, md: 3 }}>
+          <Tabs
+            orientation="vertical"
+            variant="scrollable"
+            value={value}
+            onChange={handleChange}
+            slotProps={{
+              indicator: {
+                sx: { backgroundColor: '#228B22' },
+              },
+            }}
+          >
+            <StyledTab label="Financial Intelligence Tool" {...a11yProps(0)} />
+            <StyledTab label="Raw Material Supply Chain Management Application" {...a11yProps(1)} />
+          </Tabs>
+        </Grid>
+        <Grid size={{ xs: 12, md: 9 }}>
+          <TabPanel value={value} index={0}>
+            <FIT />
+          </TabPanel >
+          <TabPanel value={value} index={1}>
+            <OEM />
+          </TabPanel >
+        </Grid>
+      </Grid>
     </>
   );
 }

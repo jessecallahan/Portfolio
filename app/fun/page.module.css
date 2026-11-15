@@ -1,0 +1,12 @@
+
+  .color {
+    color: #228B22;
+  }
+  .img {
+    margin: auto;
+    display: block;
+    max-width: 60%;
+    max-height: 60%;
+    height: 300;
+    box-shadow: 3px 8px 3px 3px rgba(38,70,83,.4);
+  }

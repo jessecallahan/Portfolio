@@ -1,0 +1,20 @@
+  .color {
+    color: #228B22;
+    font-size: 16;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .headerColor {
+    color: black;
+  }
+
+  .ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .links {
+    color: black;
+    padding-top: 12;
+  }

@@ -4,16 +4,14 @@ import React from 'react';
 import { makeStyles } from '@mui/material/styles';
 
 export default function OEM() {
-  // const classes = useStyles();
 
   return (
     <>
-     
-        <div>Raw Material Supply Chain Management Application for Large Automotive OEM</div>
-        {/* <div>
-          <div>The application is a workflow and approval web application used by the OEM’s supply-chain partners to define, submit for approval and manage changes to steel and aluminum part specifications. In addition, trials raw material ordering and shipments are managed within the application on behalf of the OEM’s part suppliers. The application supports bi-directional integration with the OEM’s SAP system..</div>
-          <div>I am a developer for new features and enhancements made to this application. I provide ongoing production support, code enhancements and fixes to the application. I report directly to the Solution Architect to ensure work is delivered on time and within scope.
-          </div>
+        <h1 >Raw Material Supply Chain Management Application for Large Automotive OEM</h1>
+        <div>
+          <p>The application is a workflow and approval web application used by the OEM’s supply-chain partners to define, submit for approval and manage changes to steel and aluminum part specifications. In addition, trials raw material ordering and shipments are managed within the application on behalf of the OEM’s part suppliers. The application supports bi-directional integration with the OEM’s SAP system..</p>
+          <p>I am a developer for new features and enhancements made to this application. I provide ongoing production support, code enhancements and fixes to the application. I report directly to the Solution Architect to ensure work is delivered on time and within scope.
+          </p>
           <div>My duties include:
             <ul>
               <li>
@@ -34,7 +32,7 @@ export default function OEM() {
               </li>
             </ul>
           </div>
-        </div> */}
+        </div>
    
 
     </>

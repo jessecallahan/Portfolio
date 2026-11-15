@@ -27,9 +27,25 @@ export default function NavBar() {
 
   return (
     <Grid>
-      <Tabs value={value} onChange={handleChange} aria-label="navigation">
+      <Tabs value={value}
+        onChange={handleChange}
+        aria-label="navigation"
+        slotProps={{
+          indicator: {
+            sx: { backgroundColor: '#228B22' },
+          },
+        }}
+      >
         {navLinks.map((link, index) => (
-          <Tab key={link.to} label={link.label} value={index} />
+          <Tab key={link.to}
+            label={link.label}
+            value={index}
+            sx={{
+              '&.Mui-selected': {
+                color: '#228B22',
+              },
+            }}
+          />
         ))}
       </Tabs>
     </Grid>

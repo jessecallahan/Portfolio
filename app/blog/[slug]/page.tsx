@@ -1,6 +1,6 @@
 // app/blog/[slug]/page.tsx
 import { Metadata } from "next";
-import { blogPosts } from "../blog-post";
+import { blogPosts } from "../blog-posts";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -20,10 +20,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Return the metadata object with Open Graph tags
   return {
     title: post.title,
-    description: post.content.substring(0, 160), // Short description for SEO
+    description: post.description.substring(0, 160), // Short description for SEO
     openGraph: {
       title: post.title,
-      description: post.content.substring(0, 160),
+      description: post.description.substring(0, 160),
       type: "article",
       url: `http://localhost:3000/blog/${slug}`,
       images: [
@@ -47,12 +47,9 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) return <h1>Post Not Found</h1>;
 
   return (
-    <article>
- <div style={{ padding: "2rem" }}>
-      <h1>{post.title}</h1>
-      <div>{post.content}</div>
+    <div style={{ marginTop: '-24px' }}>
+        <h1 style={{color: '#228B22'}}>{post.title}</h1>
+        <div>{post.content}</div>
     </div>
-    </article>
-   
   );
 }

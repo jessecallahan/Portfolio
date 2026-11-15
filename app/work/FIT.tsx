@@ -8,12 +8,11 @@ export default function FIT() {
 
   return (
     <>
- 
-          <div>Financial Intelligence Tool (FIT)</div>
-          {/* <div>
-          <div >Local governments within Washington State are required to file annual financial reports with the Washington State Auditor’s Office (SAO). The <a href='https://portal.sao.wa.gov/FIT/explore'>Financial Intelligence Tool</a> (FIT) web application provides understandable and easily accessible financial health information to the public using this annual filing information. FIT received the Outstanding Special Project Award in 2016 from the National State Auditors Association as part of their Excellence in Accountability Awards program.</div>
-          <div>I am the developer lead for all new features and enhancements made to FIT. I work closely with the Washington State Auditor’s office to ensure that the project meets agency objectives and expectations, help shape scope and provide subject matter expertise for the application. I also works closely with the Lead Technologist and Quality Assurance to ensure the code is robust, secure, scalable, reusable, and ready for production.
-          </div>
+    <h1>Financial Intelligence Tool (FIT)</h1>
+          <div>
+          <p>Local governments within Washington State are required to file annual financial reports with the Washington State Auditor’s Office (SAO). The <a href='https://portal.sao.wa.gov/FIT/explore'>Financial Intelligence Tool</a> (FIT) web application provides understandable and easily accessible financial health information to the public using this annual filing information. FIT received the Outstanding Special Project Award in 2016 from the National State Auditors Association as part of their Excellence in Accountability Awards program.</p>
+          <p>I am the developer lead for all new features and enhancements made to FIT. I work closely with the Washington State Auditor’s office to ensure that the project meets agency objectives and expectations, help shape scope and provide subject matter expertise for the application. I also works closely with the Lead Technologist and Quality Assurance to ensure the code is robust, secure, scalable, reusable, and ready for production.
+          </p>
           <div>My duties include:
             <ul>
               <li>
@@ -43,7 +42,7 @@ export default function FIT() {
               </li>
             </ul>
           </div>
-        </div> */}
+        </div>
    
     </>
   );
