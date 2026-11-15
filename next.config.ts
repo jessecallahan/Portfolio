@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  basePath: 'http://jessecallahan.github.io/Portfolio',
+  assetPrefix: 'http://jessecallahan.github.io/Portfolio',
 };
 
 export default nextConfig;
