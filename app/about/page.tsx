@@ -1,5 +1,4 @@
 'use client'
-import React from 'react'
 import Link from "next/link";
 import styles from './page.module.css';
 
@@ -27,7 +26,6 @@ function About() {
               <li>Continue expanding my technical depth in full-stack engineering, software architecture, and emerging AI development.</li>
               <li>Successfully delivered and scaled multiple applications across diverse modern tech stacks with a strong focus on reliability, mobile-first design, and accessibility. </li>
               <li>Evolved my path from a background in Media Arts (Evergreen State, KAOS music director, KBCS reporter/editor) through a CS Associate's at Seattle Central (with acceptances to SPU, Seattle U, and UW Bothell, plus React/JS tutoring) and an intensive coding bootcamp to launch a thriving professional career.</li>
-
             </ul>
           </ol>
           <ol>

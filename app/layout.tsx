@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { AppRouterCacheProvider } from
   "@mui/material-nextjs/v16-appRouter";
@@ -20,20 +19,14 @@ export default function RootLayout({
     <html lang="en">
      <body className={styles.main} >
         <AppRouterCacheProvider>
-          
-
             <nav className={styles.navbar}>
               <NavBar />
             </nav>
-
             <main>
               <div className={styles.content}>
                 {children}
               </div>
             </main>
-
-
-         
         </AppRouterCacheProvider>
       </body>
     </html>

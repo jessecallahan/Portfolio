@@ -4,7 +4,6 @@ import styles from './page.module.css'
 export default function Project1() {
 
   return (
- 
       <Grid container spacing={0}>
         <Grid size={{ xs: 12, md: 6}}>
           <h1>Art Website</h1>

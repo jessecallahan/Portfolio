@@ -1,4 +1,3 @@
-// app/page.tsx
 'use client';
 
 import { useEffect } from 'react';
@@ -12,8 +11,6 @@ export default function RootRedirect() {
   }, [router]);
   return (
     <>
-      <main>
-      </main>
     </>
   );
 }

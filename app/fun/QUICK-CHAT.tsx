@@ -3,7 +3,6 @@ import styles from './page.module.css'
 
 export default function Project3() {
   return (
-
       <Grid container spacing={0}>
         <Grid size={{ xs: 12, md: 4}}>
           <h1>Quick Chat</h1>
@@ -17,6 +16,5 @@ export default function Project3() {
           </div>
         </Grid>
       </Grid>
-
   );
 }
