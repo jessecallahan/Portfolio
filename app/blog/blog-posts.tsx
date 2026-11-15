@@ -35,7 +35,7 @@ export const blogPosts: { id: string, title: string; description: string; image:
         id: '1',
         title: "Welcome to My New Portfolio",
         description: "I\'ve revamped my website to get a more accurate picture of where I am professionally",
-        image: "/Portfolio/images/sunset.png",
+        image: "/Portfolio/images/sunset.jpg",
         content: <BlogPost1 />
     }
 ];

@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `https://jessecallahan.github.io/Portfolio/blog/${slug}`,
       images: [
         {
-          url: post.image, // Can be a local path in /public or an external absolute URL
+          url: `https://jessecallahan.github.io/${post.image}`, // Can be a local path in /public or an external absolute URL
           width: 1200,
           height: 630,
           alt: post.title,
