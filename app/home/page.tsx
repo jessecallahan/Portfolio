@@ -13,7 +13,7 @@ export default function Home() {
       }}>
         <img
           alt="Headshot"
-          src={'./images/headshot-final.jpg'}
+          src={'/Portfolio/images/headshot-final.jpg'}
           style={{
             maxWidth: '70%',
             maxHeight: 'max-content',
