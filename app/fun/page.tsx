@@ -12,7 +12,7 @@ const StyledTab = styled(Tab)(({ theme }) => ({
   },
 }));
 
-function TabPanel(props) {
+function TabPanel(props: { [x: string]: any; children: any; value: any; index: any; }) {
     const { children, value, index, ...other } = props;
 
     return (
@@ -32,7 +32,7 @@ function TabPanel(props) {
     );
 }
 
-function a11yProps(index) {
+function a11yProps(index: number) {
     return {
         id: `vertical-tab-${index}`,
         'aria-controls': `vertical-tabpanel-${index}`,
