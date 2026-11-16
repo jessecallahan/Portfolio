@@ -2,7 +2,7 @@ const BlogPost1 = ({ }) => {
     return (
         <>
             <img src="/Portfolio/images/sunset.jpg" alt="Example photo" style={{
-                float: 'left', width: '450px',
+                float: 'left', width: '100%', maxWidth: '450px',
                 marginRight: '20px',
                 marginBottom: '12px',
                 height: 'auto'
@@ -10,11 +10,11 @@ const BlogPost1 = ({ }) => {
 
             <p>I've revamped my website to give you a better picture of where I am professionally. Also I wanted an easier way to use Open Graph so I used Nextjs. My old project was in React 17 which feels like light years ago. It was good to look at my old code and see what could be improved. I did not use agentic coding to build this site but could see myself using it next time. I've tried for a long time to not be beholden to one way of "doing it", I've never really had a favorite coding language. But do have to admit, not using agentic coding in the year 2026 feels like the old school way of doing it. Which is not a bad thing. Old isn't always bad, said as a record collector and lover of nature. Using the right technology stack for the right problem is what I was always taught and that mostly always comes with some trial and error and/or experience. I think this applies to agentic coding too.</p>
 
-            <p>I want to do a blog because I enjoy reading other peoples blogs, I like writing, and I am interested in the history of technology. Sometimes I'll post something worth sharing on my professional socials. I can do it here, paste the link and then have it all in one place with a nice neat picture of my choosing, thanks, in part, to the Open Graph protocol. That traffic then goes to my site 💡. Also, I can format the posts the way I want. I like photography and doodling so I'll try to add photos I've taken or drawings I've done. These are photos from Spanish Wells, Bahamas, my gf and I took these on my film camera. Check out my art portfolio in the 'Contact' page of this site to see more of my art.</p>
+            <p>I want to do a blog because I enjoy reading other peoples blogs, I like to write, and I am interested in the history of technology. Sometimes I'll post something worth sharing on my professional socials. I can do it here, paste the link and then have it all in one place with a nice neat picture of my choosing, thanks, in part, to the Open Graph protocol. That traffic then goes to my site 💡. Also, I can format the posts the way I want. I like photography and doodling so I'll try to add photos I've taken or drawings I've done. These are photos from Spanish Wells, Bahamas, my gf and I took these on my film camera. Check out my art portfolio in the 'Contact' page of this site to see more of my art.</p>
 
 
             <img src="/Portfolio/images/katy.jpg" alt="Example photo" style={{
-                float: 'right', width: '450px',
+                float: 'right', width: '100%', maxWidth: '450px',
                 marginLeft: '20px',
                 height: 'auto'
             }}></img>

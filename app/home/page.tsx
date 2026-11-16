@@ -1,12 +1,14 @@
 'use client';
 import { Grid } from '@mui/material';
-import React from 'react';
 
 export default function Home() {
 
 
   return (
-    <Grid container sx={{ flexDirection: 'row', pt: 4 }} spacing={3}>
+    <Grid container sx={{ display: 'flex',
+        justifyContent: 'center',
+        alignItems: { xs: 'center', sm: 'start' },
+        flexDirection: { xs: 'column', sm: 'row' }, pt: 4 }} spacing={3}>
       <Grid size={6} style={{
         display: 'flex',
         justifyContent: 'center'
@@ -15,8 +17,9 @@ export default function Home() {
           alt="Headshot"
           src={'/Portfolio/images/headshot-final.jpg'}
           style={{
-            maxWidth: '70%',
-            maxHeight: 'max-content',
+            maxWidth: '100%',
+            height: 'auto',
+            maxHeight: '400px',
             boxShadow: '3px 8px 3px 3px rgba(38,70,83,.4)'
           }}
         ></img>

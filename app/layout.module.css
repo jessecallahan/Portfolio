@@ -1,11 +1,19 @@
 .main {
     display: grid;
     grid-template-rows: auto 1fr;
-    margin: 50px 200px;
+    margin: 20px 200px 20px 200px;
     gap: 25px;
+
+    @media (max-width: 600px) {
+        margin: 10px; 
+    }
+
 }
 
 .navbar {
     justify-self: center;
     align-self: center;
 }
+
+
+

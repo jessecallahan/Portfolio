@@ -4,8 +4,6 @@ import React from 'react';
 
 
 export default function FIT() {
-  // const classes = useStyles();
-
   return (
     <>
     <h1>Financial Intelligence Tool (FIT)</h1>

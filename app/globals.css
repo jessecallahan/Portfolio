@@ -1,8 +1,6 @@
-/* app/globals.css */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Warm Sanskrit paper / parchment tones */
   --bg-paper: #f5f0e6;
   --bg-paper-elevated: #ede6d6;
   --text-ink: #1e1c1a;
@@ -25,7 +23,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Crisp monospace for code snippets, tags, and dates */
 code,
 pre,
 kbd,

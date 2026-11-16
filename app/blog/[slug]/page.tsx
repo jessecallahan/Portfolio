@@ -48,7 +48,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) return <h1>Post Not Found</h1>;
 
   return (
-    <div style={{ marginTop: '-24px' }}>
+    <div style={{ margin:'-30px 10px 0 10px' }}>
         <h1 style={{color: '#228B22'}}>{post.title}</h1>
         <div>{post.content}</div>
     </div>

@@ -8,6 +8,7 @@ const StyledTab = styled(Tab)(({ theme }) => ({
   '&.Mui-selected': {
     color: '#228B22',
   },
+  display: 'inline-flex',
 }));
 
 function TabPanel(props: { [x: string]: any; children: any; value: any; index: any; }) {
@@ -15,6 +16,7 @@ function TabPanel(props: { [x: string]: any; children: any; value: any; index: a
 
   return (
     <div
+      style={{width:"100%"}}
       role="tabpanel"
       hidden={value !== index}
       id={`vertical-tabpanel-${index}`}
@@ -22,9 +24,7 @@ function TabPanel(props: { [x: string]: any; children: any; value: any; index: a
       {...other}
     >
       {value === index && (
-        <Box>
           <>{children}</>
-        </Box>
       )}
     </div>
   );
@@ -34,7 +34,6 @@ function a11yProps(index: number) {
   return {
     id: `vertical-tab-${index}`,
     'aria-controls': `vertical-tabpanel-${index}`,
-
   };
 }
 
@@ -47,8 +46,8 @@ function Work() {
 
   return (
     <>
-      <Grid container spacing={4}>
-        <Grid size={{ xs: 12, md: 3 }}>
+      <Grid container spacing={2}>
+        <Grid size={{ xs: 12, sm: 3 }}>
           <Tabs
             orientation="vertical"
             variant="scrollable"
@@ -59,12 +58,16 @@ function Work() {
                 sx: { backgroundColor: '#228B22' },
               },
             }}
+            sx={{
+              width: '100%',
+              alignItems:'center'
+            }}
           >
             <StyledTab label="Financial Intelligence Tool" {...a11yProps(0)} />
             <StyledTab label="Raw Material Supply Chain Management Application" {...a11yProps(1)} />
           </Tabs>
         </Grid>
-        <Grid size={{ xs: 12, md: 9 }}>
+        <Grid size={{ xs: 12, sm: 8 }}>
           <TabPanel value={value} index={0}>
             <FIT />
           </TabPanel >
