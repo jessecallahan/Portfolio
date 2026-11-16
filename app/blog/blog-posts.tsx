@@ -16,6 +16,7 @@ const BlogPost1 = ({ }) => {
             <img src="/Portfolio/images/katy.jpg" alt="Example photo" style={{
                 float: 'right', width: '100%', maxWidth: '450px',
                 marginLeft: '20px',
+                marginBottom: '12px',
                 height: 'auto'
             }}></img>
             <p>
